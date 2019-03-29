@@ -1,28 +1,39 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from "react"
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
+
+
+class App extends Component{
+  constructor(){
+    super()
+
+
+    this.getImg = this.getImg.bind(this)
+    this.btn = this.btn.bind(this)
+    this.getText = this.getText.bind(this)
   }
-}
+  componentDidMount(){
 
-export default App;
+
+  }
+  getImg(){
+    return <img src="https://dog.ceo/api/breeds/image/random"></img>
+
+  }
+  btn(){
+    return <button>Click</button>
+  }
+  getText(){
+    return <h1>adsszdxfgcgvvhjk</h1>
+  }
+render(){
+  return (
+    <div>
+      {this.getImg()}
+      {this.getText()}
+      {this.btn()}
+    </div>
+  )
+}
+}
+console.log(App)
+export default App
